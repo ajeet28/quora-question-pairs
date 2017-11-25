@@ -90,13 +90,13 @@ if __name__ == "__main__":
 
 	# setting the hyper parameters
 	parser = argparse.ArgumentParser()
-	parser.add_argument('--batch_size', default=32, type=int)
-	parser.add_argument('--epochs', default=50, type=int)
-	parser.add_argument('--is_training', default=1, type=int)
-	parser.add_argument('--data_path', default='data/')
-	parser.add_argument('--lr', default=0.001, type=float)
-	parser.add_argument('--clipvalue', default=8.0, type=float)
-	parser.add_argument('--clipnorm', default=10.0, type=float)
+	parser.add_argument('--batch_size', default=32, type=int, help='Batch size')
+	parser.add_argument('--epochs', default=50, type=int, help='Number of epochs')
+	parser.add_argument('--is_training', default=1, type=int, help='Training(1) or testing(0)')
+	parser.add_argument('--data_path', default='data/',help='Path to data folder')
+	parser.add_argument('--lr', default=0.001, type=float, help='Learning rate')
+	parser.add_argument('--clipvalue', default=8.0, type=float, help='Clipvalue for optimizer')
+	parser.add_argument('--clipnorm', default=10.0, type=float, help='Clipnorm value for optimizer')
 	args = parser.parse_args()
 	
 	#load data
